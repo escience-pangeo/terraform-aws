@@ -17,6 +17,7 @@ resource "aws_instance" "scotts-machine" {
   ami           = var.amis[var.region]
   instance_type = var.instance
   tags = {
-    Name = "scott test machine"
+    Name = "scott test machine",
+    Repo = "escience-pangeo/terraform-aws"
   }
 }
