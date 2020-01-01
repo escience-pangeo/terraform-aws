@@ -35,7 +35,7 @@ jobs:
           tf_actions_subcommand: 'init'
           tf_actions_working_dir: 'ec2'
           tf_actions_comment: true
-          args: '-backend-config="bucket=${{ secrets.AWS_S3BUCKET }}" -backend-config="${{ secrets.AWS_S3KEY }}"'
+          args: '-backend-config="bucket=${{ secrets.AWS_S3BUCKET }}" -backend-config="key=${{ secrets.AWS_S3KEY }}"'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: 'Terraform Validate'
