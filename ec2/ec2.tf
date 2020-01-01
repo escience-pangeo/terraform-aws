@@ -10,7 +10,6 @@ terraform {
 
 provider "aws" {
   version = "~> 2.40"
-  profile = var.profile
   region  = var.region
 }
 
